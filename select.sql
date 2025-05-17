@@ -99,3 +99,22 @@ SELECT * FROM students WHERE country NOT IN('USA', 'UK')
 
 SELECT * from students
     WHERE age BETWEEN 17 and 18;
+
+SELECT * from students
+    WHERE dob BETWEEN '2006-01-01' and '2010-01-01' ORDER BY dob;
+
+
+
+SELECT * from students
+    WHERE first_name LIKE '%ia '
+
+
+SELECT * from students
+    WHERE first_name LIKE 'A%';
+
+SELECT * from students
+    WHERE first_name LIKE '____a';
+
+
+SELECT * from students
+    WHERE first_name ILIKE 'a%';
