@@ -54,3 +54,6 @@ SELECT * FROM students age
 
 SELECT * FROM students 
     WHERE country = 'USA' OR country = 'Australia';
+
+SELECT * FROM students 
+    WHERE (country = 'USA' OR country = 'Australia') AND age = 20;
