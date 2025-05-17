@@ -66,3 +66,18 @@ SELECT upper(first_name) FROM students;
 
 SELECT upper(first_name) as first_name_in_upper_case, * FROM students;
 SELECT concat(first_name, ' ', course) FROM students;
+
+
+SELECT avg(age) FROM students;
+
+SELECT max(age) FROM students;
+
+SELECT min(age) FROM students;
+
+SELECT sum(age) FROM students;
+
+SELECT count(*) FROM students;
+
+
+
+
