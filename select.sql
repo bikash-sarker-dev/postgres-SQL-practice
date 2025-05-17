@@ -31,3 +31,26 @@ INSERT INTO students (first_name, age, grade, course, email, dob, blood_group, c
 select * from students ORDER BY first_name ASC;
 select * from students ORDER BY age ASC;
 select * from students ORDER BY dob ASC;
+
+select country from students ORDER BY country DESC;
+
+
+SELECT DISTINCT country from students;
+SELECT DISTINCT blood_group from students;
+
+SELECT * FROM students age
+    WHERE country = 'USA';
+
+
+SELECT * FROM students age
+    WHERE grade = 'A' AND course = 'Mathematics';
+
+
+SELECT * FROM students age
+    WHERE blood_group = 'A+';
+
+SELECT * FROM students age
+    WHERE blood_group = 'A+';
+
+SELECT * FROM students 
+    WHERE country = 'USA' OR country = 'Australia';
