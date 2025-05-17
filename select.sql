@@ -57,3 +57,12 @@ SELECT * FROM students
 
 SELECT * FROM students 
     WHERE (country = 'USA' OR country = 'Australia') AND age = 20;
+
+SELECT * FROM students
+    WHERE age != 18;
+
+SELECT upper(first_name) FROM students;
+
+
+SELECT upper(first_name) as first_name_in_upper_case, * FROM students;
+SELECT concat(first_name, ' ', course) FROM students;
