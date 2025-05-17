@@ -118,3 +118,21 @@ SELECT * from students
 
 SELECT * from students
     WHERE first_name ILIKE 'a%';
+
+SELECT * from students LIMIT 6;
+
+
+SELECT * from students LIMIT 3 OFFSET 2 * 0;
+
+SELECT * from students LIMIT 3 OFFSET 2 *  1;
+
+SELECT * from students LIMIT 3 OFFSET 2 *  2;
+
+SELECT * from students;
+
+DELETE from students
+    WHERE grade = 'B';
+
+UPDATE students 
+    set email = 'default@gmail.com', age = 30
+    WHERE student_id = 7;
