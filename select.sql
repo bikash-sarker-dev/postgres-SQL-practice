@@ -78,6 +78,13 @@ SELECT sum(age) FROM students;
 
 SELECT count(*) FROM students;
 
+SELECT max(length(first_name)) FROM students;
+
+
+SELECT * FROM students
+    WHERE NOT country = 'USA';
 
 
 
+SELECT * FROM students
+    WHERE email IS NULL;
