@@ -13,6 +13,7 @@ select * from "user";
 ALTER Table "user"
     RENAME COLUMN age to user_age;
 
+
 ALTER TABLE "user"
     alter COLUMN f_name type VARCHAR(100);
 
@@ -22,5 +23,10 @@ ALTER TABLE "user"
 
 ALTER Table "user"
     alter column user_age drop NOT NULL;
-    
 
+ALTER Table "user"
+    ADD constraint unique_users_user_age UNIQUE(user_age);
+
+
+ALTER TABLE "user"
+    DROP constraint unique_users_user_age;
