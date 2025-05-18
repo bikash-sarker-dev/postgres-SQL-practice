@@ -30,3 +30,5 @@ ALTER Table "user"
 
 ALTER TABLE "user"
     DROP constraint unique_users_user_age;
+
+

@@ -136,3 +136,5 @@ DELETE from students
 UPDATE students 
     set email = 'default@gmail.com', age = 30
     WHERE student_id = 7;
+
+SELECT * FROM students
