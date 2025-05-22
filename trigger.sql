@@ -40,3 +40,9 @@ CREATE or REPLACE Trigger save_delete_user_trigger
     ;
 
 DELETE FROM my_user WHERE user_name = 'bikash'
+
+EXPLAIN ANALYSE
+SELECT * FROM my_user;
+
+
+CREATE INDEX idx_name on my_user;
