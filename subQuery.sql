@@ -75,9 +75,52 @@ SELECT * FROM employees
 SELECT count(*) from employees
 
 CREATE Function emp_count()
-RETURNS IN
-LEADING SQL
+RETURNS INT
+LANGUAGE SQL
 as
 $$
-SELECT count(*) from employees
-$$
+    SELECT count(*) from employees;
+$$;
+
+SELECT emp_count();
+
+CREATE FUNCTION delete_emp()
+    RETURNS void
+    LANGUAGE SQL
+    AS
+    $$
+        DELETE from employees WHERE employee_id = 30
+    $$;
+
+SELECT delete_emp()
+
+
+CREATE FUNCTION delete_emp_para(p_emp_id int)
+    RETURNS void
+    LANGUAGE SQL
+    AS
+    $$
+        DELETE from employees WHERE employee_id = p_emp_id
+    $$;
+
+SELECT delete_emp_para(25)
+
+
+CREATE Procedure remove_emp_var(p_id_emp INT)
+    LANGUAGE plpgsql
+    as 
+    $$
+        DECLARE
+        test_var INT;
+        BEGIN 
+            SELECT employee_id INTO test_var FROM employees WHERE employee_id = p_id_emp;
+            DELETE from employees WHERE employee_id = test_var;
+
+            RAISE NOTICE 'employee remove successfully!';
+        END
+    $$;
+
+
+call remove_emp_var(7)
+
+SELECT * FROM employees
